@@ -1,0 +1,116 @@
+%META:TOPICINFO{author="JanKrueger" comment="reprev" date="1363102083" format="1.1" reprev="6" version="8"}%
+
+%TMPL:DEF{"offcanvas:bars"}%%TMPL:PREV%%TMPL:P{"sessionbar"}%%TMPL:END%
+
+%TMPL:DEF{"dashboard:menu"}%%TMPL:PREV%<div class="close" data-offcanvas-toggle="sessionbar" >session</div>%TMPL:END%
+
+%TMPL:DEF{"sessionbar"}%<!--sessionbar-->
+<div class="qw-sessionbar qw-littleoffcanvas" data-offcanvas data-offcanvas-persist-state data-target="sessionbar">
+  <div>
+    <div class="session-header">
+      <div>%TMPL:P{"perspage:session-header"}%</div>
+    </div>
+    <div class="session-content">
+      <div>%TMPL:P{"perspage:session-content"}%</div>
+    </div> 
+    <div class="history-header">
+      <div>%TMPL:P{"perspage:history-header"}%</div>
+    </div>
+    <div class="history-content">
+      <div>%TMPL:P{"perspage:history-content"}%</div>
+    </div>
+  </div>
+</div><!--/sessionbar-->%TMPL:END%
+
+%TMPL:DEF{"perspage:session-header"
+}%<span>%MAKETEXT{"Session data"}%</span>
+  <span class="qw-prio2-btn session-data-max"><i class="icon-maximize"></i></span>
+%TMPL:END%
+
+%TMPL:DEF{"perspage:session-content"
+}%
+<div class="session-content">
+  <div>
+    <div class="session-data-container">
+      <div class="entry">
+        <span class="label">%MAKETEXT{"Stand"}%</span>
+        <span class="content">%RENDERFORDISPLAY{field="Day" format="$value"}%</span>
+      </div>
+      <div class="entry">
+        <span class="label">%MAKETEXT{"Day"}%</span>
+        <span class="content">%RENDERFORDISPLAY{field="Content" format="$value"}%</span>
+      </div>
+      <div class="entry">
+        <span class="label">%MAKETEXT{"Time"}%</span>
+        <span class="content">%RENDERFORDISPLAY{field="Time" format="$value"}%</span></div>
+      <div class="entry">
+        <span class="label">%MAKETEXT{"Rotation"}%</span>
+        <span class="content">%RENDERFORDISPLAY{field="Rotation" format="$value"}%</span>
+      </div>
+      <div class="entry">
+        <span class="label">%MAKETEXT{"Location"}%</span>
+        <span class="content location"><i class="icon-location"> </i> %RENDERFORDISPLAY{field="Location" format="$value"}%</span>
+      </div>
+      <div class="entry">
+        <span class="label">%MAKETEXT{"Participants"}%</span>
+        <span class="content user"><i class="icon-user"></i> %RENDERFORDISPLAY{field="Participants" format="$value"}%</span>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>       
+%TMPL:END%
+
+%TMPL:DEF{"perspage:history-header"
+}%<span>%MAKETEXT{"Session history"}%</span>
+<span class="qw-prio2-btn history-data-max"><i class="icon-maximize"></i></span>
+%TMPL:END%
+
+%TMPL:DEF{"perspage:history-content"
+}%<div class="history-container">
+    <div class="history">
+      <div class="history-left">
+        <label>
+          <i class="icon-megaphon"></i>
+        </label>
+      </div>
+      <div class="history-right">
+        <div class="caption">
+          <span class="header">%MAKETEXT{"Heading of sticky message"}%</span>
+        </div>
+        <div class="content">
+          <span>
+            %MAKETEXT{"some example texts. some example texts.some example texts.some example texts.some example texts.
+            some example texts.some example texts.some example texts.some example texts.some example texts."}%
+          </span>
+        </div>
+        <div class="author">
+          <span>%MAKETEXT{"from"}%</span><span class="responsible"> <i class="icon-user-author"></i> %REVINFO{format="$wikiusername"}%</span>
+          <span>%MAKETEXT{"in"}%</span><span class="date">%MAKETEXT{"11.10.2015 - 9:45h"}%</span>
+        </div>
+      </div>
+    </div>
+    <div class="history">
+      <div class="history-left">
+        <label>
+          <i class="icon-megaphon"></i>
+        </label>
+      </div>
+      <div class="history-right">
+        <div class="caption">
+          <span class="header">%MAKETEXT{"Heading of sticky message"}%</span>
+        </div>
+        <div class="content">
+          <span>
+            %MAKETEXT{"some example texts. some example texts.some example texts.some example texts.some example texts.
+            some example texts.some example texts.some example texts.some example texts.some example texts."}%
+          </span>
+        </div>
+        <div class="author">
+          <span>%MAKETEXT{"from"}%</span><span class="responsible"> <i class="icon-user-author"></i> %REVINFO{format="$wikiusername"}%</span>
+          <span>%MAKETEXT{"in"}%</span><span class="date">%MAKETEXT{"11.10.2015 - 9:45h"}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+%TMPL:END%

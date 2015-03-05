@@ -1,0 +1,4 @@
+!noci
+data/System/SessionContrib.txt 0664
+data/System/SessionTemplate.txt 0664
+lib/Foswiki/Contrib/SessionContrib.pm 0444

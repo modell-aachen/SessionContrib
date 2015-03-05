@@ -1,0 +1,12 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1377855044" format="1.1" reprev="2" version="2"}%
+---+!! SessionContrib
+
+Modell Aachen Session Contrib
+
+---++ Installation
+
+---++ Info
+
+|  Author: | Modell Aachen GmbH |
+|  Home: | http://www.modell-aachen.de |
+|  Support: | http://www.modell-aachen.de |

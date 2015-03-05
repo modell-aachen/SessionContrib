@@ -1,0 +1,153 @@
+%META:TOPICINFO{author="JanKrueger" comment="reprev" date="1363102083" format="1.1" reprev="6" version="8"}%
+
+%TMPL:DEF{"offcanvas:bars"}%%TMPL:PREV%%TMPL:P{"inboxbar"}%%TMPL:END%
+
+%TMPL:DEF{"dashboard:menu"}%%TMPL:PREV%<div class="close" data-offcanvas-toggle="inboxbar" >inbox</div>%TMPL:END%
+
+%TMPL:DEF{"inboxbar"}%<!--inboxbar-->
+<div class="qw-inboxbar qw-littleoffcanvas" data-offcanvas data-offcanvas-persist-state data-target="inboxbar">
+  <div>
+    <div class="header">
+      <div>
+        <i class="icon-inbox"></i>
+        <span>%MAKETEXT{"Input,"}%<a href="#">%MAKETEXT{" All "}%  </a><i class="icon-arrow-down" data-dropdown="#qw-inboxbar-more-menu"></i>
+          <ul id="qw-inboxbar-more-menu" class="qw-dropdown-light">
+            <li><a href="#">sub menu 1</a></li>
+            <li><a href="#">sub menu 2</a></li>
+            <li><a href="#">sub menu 3</a></li>
+            <li><a href="#">sub menu 4</a></li>
+          </ul>
+        </span>
+      </div>
+    </div>
+    <div class="content">
+        <div>%TMPL:P{"perspage:inbox"
+        }%</div>
+    </div>
+  </div>
+</div><!--/inboxbar-->%TMPL:END%
+
+%TMPL:DEF{"perspage:inbox"
+}%<div class="label">%MAKETEXT{"Last View: 9.10. 10:30H"}%</div>
+  <div class="inbox-container">
+    <div class="inbox priority">
+      <div class="inbox-left">
+        <label>
+          <i class="icon-megaphon"></i>
+        </label>
+      </div>
+      <div class="inbox-right">
+        <div class="caption">
+          <span class="header">%MAKETEXT{"Heading of sticky message"}%</span>
+          <span class="date">%MAKETEXT{"11.10.2015 - 9:45h"}%</span>
+        </div>
+        <div class="content">
+          <span>
+            %MAKETEXT{"some example texts. some example texts.some example texts.some example texts.some example texts.
+            some example texts.some example texts.some example texts.some example texts.some example texts."}%
+          </span>
+        </div>
+        <div class="author">
+          <span class="responsible"><i class="icon-user-author"></i> %REVINFO{format="$wikiusername"}%</span>
+        </div>
+      </div>
+      <div class="tools">
+        <ul>
+          <li class="inbox-add"><i class="icon-task-add"></i></li>
+          <li class="inbox-download"><i class="icon-arrowlong-down"></i></li>
+          <li class="inbox-check"><i class="icon-checkmark"></i></li>
+        </ul>
+      </div>
+    </div>
+    <div class="inbox">
+      <div class="inbox-left">
+        <label>
+          <i class="icon-megaphon"></i>
+        </label>
+      </div>
+      <div class="inbox-right">
+        <div class="caption">
+          <span class="header">%MAKETEXT{"Heading of stecky message"}%</span>
+          <span class="date">%MAKETEXT{"11.10.2015 - 9:45h"}%</span>
+        </div>
+        <div class="content">
+          <span>
+            %MAKETEXT{"some example texts."}%
+          </span>
+        </div>
+        <div class="author">
+          <span class="responsible"><i class="icon-user-author"></i> %REVINFO{format="$wikiusername"}%</span>
+          <span class="meetings"><i class="icon-app-meetings"></i>GESELLSCHAFTERSITZUNG</span>
+        </div>
+      </div> 
+      <div class="tools">
+        <ul>
+          <li class="inbox-add"><i class="icon-task-add"></i></li>
+          <li class="inbox-download"><i class="icon-arrowlong-down"></i></li>
+          <li class="inbox-check"><i class="icon-checkmark"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="label">%MAKETEXT{"Last View: 9.10. 10:30H"}%</div>
+  <div class="inbox-container">
+    <div class="inbox priority">
+      <div class="inbox-left">
+        <label>
+          <i class="icon-megaphon"></i>
+        </label>
+      </div>
+      <div class="inbox-right">
+        <div class="caption">
+          <span class="header">%MAKETEXT{"Heading of stecky message"}%</span>
+          <span class="date">%MAKETEXT{"11.10.2015 - 9:45h"}%</span>
+        </div>
+        <div class="content">
+          <span>
+            %MAKETEXT{"some example texts. some example texts.some example texts.some example texts.some example texts.
+            some example texts.some example texts.some example texts.some example texts.some example texts."}%
+          </span>
+        </div>
+        <div class="author">
+          <span class="responsible"><i class="icon-user-author"></i> %REVINFO{format="$wikiusername"}%</span>
+        </div>
+      </div>
+      <div class="tools">
+        <ul>
+          <li class="inbox-add"><i class="icon-task-add"></i></li>
+          <li class="inbox-download"><i class="icon-arrowlong-down"></i></li>
+          <li class="inbox-check"><i class="icon-checkmark"></i></li>
+        </ul>
+      </div>
+    </div>
+    <div class="inbox">
+      <div class="inbox-left">
+        <label>
+          <i class="icon-megaphon"></i>
+        </label>
+      </div>
+      <div class="inbox-right">
+        <div class="caption">
+          <span class="header">%MAKETEXT{"Heading of stecky message"}%</span>
+          <span class="date">%MAKETEXT{"11.10.2015 - 9:45h"}%</span>
+        </div>
+        <div class="content">
+          <span>
+            %MAKETEXT{"some example texts."}%
+          </span>
+        </div>
+        <div class="author">
+          <span class="responsible"><i class="icon-user-author"></i> %REVINFO{format="$wikiusername"}%</span>
+          <span class="meetings"><i class="icon-app-meetings"></i>GESELLSCHAFTERSITZUNG</span>
+        </div>
+      </div> 
+      <div class="tools">
+        <ul>
+          <li class="inbox-add"><i class="icon-task-add"></i></li>
+          <li class="inbox-download"><i class="icon-arrowlong-down"></i></li>
+          <li class="inbox-check"><i class="icon-checkmark"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>          
+%TMPL:END%
