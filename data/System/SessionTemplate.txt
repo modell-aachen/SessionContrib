@@ -2,6 +2,8 @@
 
 %TMPL:DEF{"offcanvas:bars"}%%TMPL:PREV%%TMPL:P{"sessionbar"}%%TMPL:END%
 
+%TMPL:DEF{"script"}%%ADDTOZONE{"script" id="sessionJs" requires="JQUERYPLUGIN,FLATSKIN::SCRIPTS" text="<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/SessionContrib/sessioncontrib.js'></script>"}%%TMPL:PREV%%TMPL:END%
+
 %TMPL:DEF{"dashboard:menu"}%%TMPL:PREV%<div class="close" data-offcanvas-toggle="sessionbar" >session</div>%TMPL:END%
 
 %TMPL:DEF{"sessionbar"}%<!--sessionbar-->
