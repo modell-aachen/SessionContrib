@@ -1,6 +1,7 @@
 %META:TOPICINFO{author="JanKrueger" comment="reprev" date="1363102083" format="1.1" reprev="6" version="8"}%
 
 %TMPL:DEF{"offcanvas:bars"}%%TMPL:PREV%%TMPL:P{"sessionbar"}%%TMPL:END%
+%TMPL:DEF{"offcanvas:bars"}%%TMPL:PREV%%TMPL:P{"agendadetail"}%%TMPL:END%
 
 %TMPL:DEF{"script"}%%ADDTOZONE{"script" id="sessionJs" requires="JQUERYPLUGIN,FLATSKIN::SCRIPTS" text="<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/SessionContrib/sessioncontrib.js'></script>"}%%TMPL:PREV%%TMPL:END%
 
@@ -115,4 +116,61 @@
       </div>
     </div>
   </div>
+%TMPL:END%
+
+%TMPL:DEF{"agendadetail"}%
+<div class="qw-agendadetail qw-bigoffcanvas" data-offcanvas data-offcanvas-persist-state data-target="agendadetail">
+  <div class="close" data-offcanvas-toggle="agendadetail">
+    <div><i class="icon-arrow-right"></i></div>
+  </div>
+  <div class="agendadetail-header">
+    <div>
+      <span class="content">%MAKETEXT{"Exemplarische Headline eines Protokollpunkts vom Typ Aufgabe mit viel Text"}%</span>
+      <span class="edit"><i class="icon-edit"></i></span>
+    </div>
+  </div>
+  <div class="agendadetail-content">
+    <div>
+      <div class="firstdetail">
+        <label>%MAKETEXT{"Responsible"}%
+          <div>
+            <div class="user"><i class="icon-user"></i>Jan.Krueger<i class="icon-close"></i></div>
+            <div class="useradd"><i class="icon-edit"></i></div>
+          </div>
+        </label>
+        <div class="taskcalendar">
+          <label for="duecalendar">%MAKETEXT{"Due on"}%</label>
+          %INCLUDE{"%SYSTEMWEB%.JSCalendarContribInline"
+          }%<div id="duecalendar" class="duecalendar"><i class="icon-clock" \ onclick="return showCalendar('cal_val_here','%e %B %Y')"></i><input type="text" id="cal_val_here" /></div> 
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="seconddetail">
+        <div class="second-header"><span>12.10.2014 - 12:35h</span></div>
+        <div class="second-content"><span>%MAKETEXT{"Some sample text Some sample text Some sample text Some sample text Some sample text Some sample text Some sample ext Some sample text Some sample text Some sample text Some sample text Some sample text Some sample text Some sample text"}%</span></div>
+        <div class="second-footer">
+          <span class="author"><i class="icon-user-author"></i> %REVINFO{format="$wikiusername"}%</span>
+          <span class="meeting"><i class="icon-app-meetings"></i>%MAKETEXT{"GESELLSCHAFTERSITZUNG"}%</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="thirddetail">
+        <div>
+          <ul class="taskdetail-list">
+            <li><span><i class="icon-task-done"></i>%MAKETEXT{"done"}%</span></li>
+            <li><span><i class="icon-arrowlong-down"></i>%MAKETEXT{"tolerate"}%</span></li>
+            <li><span><i class="icon-remove"></i>%MAKETEXT{"discard"}%</span></li>
+          </ul>
+          <textarea class="tasknote" rows="5"></textarea>
+        </div>
+        <div class="buttons">
+          <div class="finish qw-prio1-btn">%MAKETEXT{"finish"}%</div>
+          <div class="cancel qw-prio2-btn">%MAKETEXT{"cancel"}%</div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 %TMPL:END%
