@@ -70,7 +70,24 @@
 %TMPL:END%
 
 %TMPL:DEF{"perspage:history-content"
-}%<div class="history-container">
+}%
+
+%SEARCH{
+    "'1'" 
+    web="Tasks"
+    topic="Task-*"
+    scope="topic" 
+    type="query" 
+    nosearch="on" 
+    noheader="on" 
+    nototal="on"
+    order="modified" 
+    pager="on"
+    pagesize="%URLPARAM{"limit" default="%DEFAULTPAGESIZE%"}%" 
+    reverse="on"
+    }%
+
+<div class="history-container">
     <div class="history">
       <div class="history-left">
         <label>
