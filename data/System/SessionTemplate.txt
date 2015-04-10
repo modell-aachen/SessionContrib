@@ -71,15 +71,12 @@
 
 %TMPL:DEF{"perspage:history-content"
 }%
-<<<<<<< HEAD
 <div class="history-container">
   %SOLRSEARCH{"web:Tasks type:task topic:Task-* field_Parent_s:(%BASETOPIC% OR %SUBST{text="%BASEWEB%" pattern="/" format="."}%.%BASETOPIC% OR %BASEWEB%/%BASETOPIC%)"
   order="modified"
   rows="999"
   format="<div class=\"history\"><div class=\"history-left\"><label><i class=\"icon-megaphon\"></i></label></div><div class=\"history-right\"><div class=\"caption\"><span class=\"header\">%MAKETEXT{"$field_Title_s"}%</span></div><div class=\"content\"><span>%MAKETEXT{"$field_Description_s"}%</span></div><div class=\"author\"><span>%MAKETEXT{"from"}%</span><span class=\"responsible\"> <i class=\"icon-user-author\"></i> $field_Author_s</span><span>%MAKETEXT{"in"}%</span><span class=\"date\">%MAKETEXT{"$field_DueOn_dt"}%</span></div></div></div>"
   reverse="on"}%</div>%TMPL:END%
-=======
-
 %SEARCH{
     "'1'" 
     web="Tasks"
