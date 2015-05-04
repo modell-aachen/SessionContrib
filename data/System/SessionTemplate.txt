@@ -100,7 +100,7 @@
 
 %TMPL:DEF{"perspage:agenda-header"
 }%<span><i class="icon-hostory"></i>%MAKETEXT{"Session data"}%</span>
-  <span class="qw-prio2-btn agenda-data-max"><i class="icon-maximize"></i></span>
+  <span class="qw-prio2-btn agenda-data-max"><i class="icon-arrow-right"></i></span>
 %TMPL:END%
 
 %TMPL:DEF{"perspage:agenda-content"
